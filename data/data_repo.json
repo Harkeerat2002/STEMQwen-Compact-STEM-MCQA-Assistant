@@ -1,0 +1,6 @@
+{
+  "dpo_dataset_repo_id": "ddarbinyan/MNLP_M3_dpo_dataset",
+  "mcqa_dataset_repo_id": "hssawhney/MNLP_M3_mcqa_dataset",
+  "quantized_mcqa_dataset_repo_id": "zay25/MNLP_M3_quantized_dataset",
+  "rag_mcqa_dataset_repo_id": "sucharush/MNLP_M3_rag_dataset"
+}

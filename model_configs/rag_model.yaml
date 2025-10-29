@@ -1,0 +1,22 @@
+model:
+  base_params:
+    # Change <HF_USERNAME_team_member_RAG> to your own Huggingface username that holds the repo MNLP_M3_rag_model
+    # (Optional) If you want to use a chat template, set "use_chat_template=true" after revision.
+    # (Optional) However, you must ensure that the chat template is saved in the model checkpoint.
+    model_args: "pretrained=sucharush/MNLP_M3_rag_model,revision=main" 
+    dtype: "float16"
+    compile: false
+  rag_params:
+    embedding_model: "sucharush/MNLP_M3_document_encoder" # Change <HF_USERNAME_team_member_RAG> to your own Huggingface username that holds the repo MNLP_M3_document_encoder
+    docs_name_or_path: "sucharush/stem_corpus" # Change this to your own repo name for the RAG document on huggingface hub
+    similarity_fn: cosine # Select the similarity function to use, options are: cosine, dot_product, max_inner_product, jaccard
+    top_k: 2 # Choose the number of documents to retrieve
+    num_chunks: 100000 # This is the limit we set for the number of chunks to retrieve from the document where each chunk is 512 tokens
+
+  # Ignore this section, do not modify!
+  merged_weights:
+    delta_weights: false
+    adapter_weights: false
+    base_model: null
+  generation:
+    temperature: 0.0

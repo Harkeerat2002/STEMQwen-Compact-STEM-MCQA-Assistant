@@ -1,0 +1,89 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+
+\usepackage{ACL2023}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+
+%%%%%%%%%%%%%%%%%%% TITLE AND AUTHORS %%%%%%%%%%%%%%%%%%%
+
+\title{Your Title}
+
+\author{\normalfont 
+Author 1 | SCIPER 1 | \texttt{author1@epfl.ch} \\
+Author 2 | SCIPER 2 | \texttt{author2@epfl.ch} \\
+Author 3 | SCIPER 3 | \texttt{author3@epfl.ch} \\
+Author 4 | SCIPER 4 | \texttt{author4@epfl.ch} \\
+Your group name
+}
+
+%%%%%%%%%%%%%%%%%%% PROPOSAL %%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Your abstract should concisely (less than 300 words) motivate the problem, describe your aims, describe your contribution, and highlight your main finding(s).
+\end{abstract}
+
+\section{Introduction}
+The introduction explains the problem, why it’s difficult, interesting, or important, how and why current methods succeed/fail at the problem, and explains the key ideas of your approach and results. Though an introduction covers similar material as an abstract, the introduction gives more space for motivation, detail, references to existing work, and to capture the reader’s interest.
+
+
+\section{Approach}
+This section details your approach to the problem. For example, this is where you describe the architecture of your system, and any other key methods or algorithms. You should be specific when describing your main approaches – you probably want to include equations and figures. You should describe in your approach how you implemented the reward model as well as the MCQA, RAG, and Quantization models.
+
+When writing equations and other notation, be sure to agree on a fixed technical vocabulary (that you’ve defined, or is well-defined in the literature) before writing. Then, use it consistently throughout the report.
+
+
+\section{Experiments}
+This section contains the following.
+
+\begin{itemize}
+    \item \textbf{Data:} Describe the dataset(s) you are using (provide references, e.g~\cite{nakano2021webgpt}). Being precise about the exact form of the input and output can be very useful for readers attempting to understand your work, especially if you’ve defined your own task. If there are legal or ethical considerations to the data used, discuss it here.
+    \item \textbf{Evaluation method:} Describe the evaluation metric(s) you use, plus any other details necessary to understand your evaluation. If you’re defining your own metrics, be clear as to what you’re hoping to measure with each evaluation method (whether quantitative or qualitative, automatic or human-defined!), and how it’s defined.
+    \item \textbf{Baselines:} You should also describe your baseline(s)
+    \item \textbf{Experimental details:} Report how you ran your experiments (e.g. model configurations, learning rate, training time, etc.)
+    \item \textbf{Results:} Report the quantitative results that you have found so far. Use a table or plot to compare results and compare against baselines. Comment on your quantitative results. Are they what you expected? Why do you think that is? What does that tell you about your approach?
+\end{itemize}
+
+
+
+\section{Analysis} 
+Your report can include qualitative evaluation. You should try to understand your system (e.g. how it works, when it succeeds and when it fails) by inspecting key characteristics or outputs of your model.
+
+Types of qualitative evaluation include: commenting on selected examples, error analysis, measuring the performance metric for certain subsets of the data, ablation studies, comparing the behaviors of two systems beyond just the performance metric, and visualizing attention distributions or other activation heatmaps.
+
+
+\section{Ethical considerations}
+An ethics statement reflecting on the broader impact of your work, or any other ethical considerations. Questions you should consider include: 
+\begin{enumerate}
+    \item You must discuss how your model could be adapted to handle other high-resource languages, like French, German, etc., as well as low-resource languages, like Urdu and Swahili.
+    \item If your model works as intended, who benefits, and who might be harmed? How? Consider not only the model itself, but also the data it was trained on. Similarly, try to think about not only how the model is intended to be used, but how it might be used and/or exploited for other purposes.
+    \item How can the potential harms be mitigated? Think about the harms you identified in the previous point, and what measures can be taken in advance to prevent them?
+    \item Are any of the harms more likely to hurt people who are already members of a minority group, or otherwise vulnerable or marginalized? Why? Can anything be done to minimize this?
+\end{enumerate}
+
+
+
+\section{Conclusion}
+Summarize the main findings of your project, and what you have learned. Highlight your achievements, and note the primary limitations of your work. If you like, you can describe avenues for future work.
+
+
+
+% Entries for the entire Anthology, followed by custom entries
+\bibliography{anthology,custom}
+\bibliographystyle{acl_natbib}
+
+\appendix
+
+\section{Appendix (optional)}
+If you wish, you can include an appendix, which should be part of the main PDF, and does not count towards the page limit. Appendices can be useful to supply extra details, examples, figures, results, visualizations, etc., that you couldn’t fit into the main paper. However, your grader does not have to read your appendix, and you should assume that you will be graded based on the content of the main part of your paper only.
+
+
+
+\end{document}
