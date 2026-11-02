@@ -1,0 +1,3 @@
+*.tex linguist-documentation
+report/** linguist-documentation
+_template/** linguist-vendored

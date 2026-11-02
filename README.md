@@ -1,4 +1,6 @@
-# MNLP-Model — STEMQwen (MCQ-focused pipeline)
+# STEMQwen: Compact STEM MCQA Assistant on Qwen3-0.6B
+
+*EPFL Modern NLP team project. This repository is the MCQ fine-tuning branch, which I implemented.*
 
 Short summary
 
